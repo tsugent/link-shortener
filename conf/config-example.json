@@ -1,0 +1,5 @@
+{
+    "CONTAINER_ENV": "local",
+    "SECRET_KEY": "nice_secret_key",
+    "DEBUG": true
+}
