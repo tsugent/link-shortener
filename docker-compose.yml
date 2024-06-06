@@ -1,0 +1,21 @@
+services:
+  django-link:
+    build:
+      context: .
+    volumes:
+      - link-volume:/var/www/link_shortener
+    ports:
+      - "8123:8123"
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - link-volume:/var/www/link_shortener
+      - ./conf/conf.d/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "8000:8000"
+    depends_on:
+      - django-link
+
+volumes:
+     link-volume: 
