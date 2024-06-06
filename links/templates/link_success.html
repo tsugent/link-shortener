@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-50 row-center">
+        <img src="{% static 'img/tpain.png' %}" width="300" height="300" class="d-inline-block align-top" alt="">
+    </div>
+    <div class="row mt-50 row-center">
+        <h3>Link shawtin'd!</h3>
+    </div>
+    <div class="row mt-50 row-center">
+        <div class="input-group mb-3 w-50">
+            <input type="text" class="form-control user-select-all" value="{{ link.redirect_url }}" readonly>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary btn-purple" onclick="copyToClipboard()">Copy</button>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-50 row-center">
+        <a href="/">
+            <button type="submit" class="btn btn-purple">Anotha' One</button>
+        </a>
+    </div>
+</div>
+{% endblock content %}
+{% block javascript %}
+<script type="text/javascript" href="{% static 'js/link_success.js' %}" />
+{% endblock javascript %}

@@ -1,0 +1,32 @@
+@import url('https://fonts.cdnfonts.com/css/quinquefive');
+
+p { 
+    font-family: 'QuinqueFive', sans-serif;
+    margin: 0 1rem 0 1rem;
+    color: black;                      
+}
+h3, button {
+    font-family: 'QuinqueFive', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.btn-purple {
+    background-color: rgb(111, 66, 193); 
+    color: white;
+}
+
+.row-center {
+    justify-content: center;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.navbar-purple {
+    background-color: rgb(111, 66, 193);
+}

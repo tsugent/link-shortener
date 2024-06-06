@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-50 row-center">
+        <img src="{% static 'img/tpain.png' %}" width="300" height="300" class="d-inline-block align-top" alt="">
+    </div>
+    <div class="row mt-50 row-center">
+        <h3>Enter a URL you want shawtin'd</h3>
+    </div>
+    <div class="row mt-50 row-center">
+        <form method="POST">
+            <div class="input-group mb-3">
+                {% csrf_token %}
+                {% for field in link_form %}
+                    {{ field }}
+                {% endfor %}
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-secondary btn-purple">Shawtin'</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
